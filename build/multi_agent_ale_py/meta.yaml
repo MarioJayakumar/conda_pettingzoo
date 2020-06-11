@@ -1,0 +1,42 @@
+{% set name = "multi_agent_ale_py" %}
+{% set version = "0.1.4.dev0" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: "https://files.pythonhosted.org/packages/30/39/47684bd1fdd216070fd835f4d8f7d5f7db5d7858544cb8b1e3ba8c0cc477/multi-agent-ale-py-0.1.4.dev0.tar.gz"
+  sha256: 044c80fa1a6027163343b3c08683146af5677722b121cebd426826bdeddf5eac
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - cmake
+    - numpy
+    - pip
+    - python
+  run:
+    - cmake
+    - numpy
+    - python
+
+test:
+  imports:
+    - multi_agent_ale_py
+
+about:
+  home: "https://github.com/PettingZoo-Team/Multi-Agent-ALE"
+  license: GPL
+  license_family: GPL
+  license_file: 
+  summary: "Multi-Agent Arcade Learning Environment Python Interface"
+  doc_url: 
+  dev_url: 
+
+extra:
+  recipe-maintainers:
+    - your-github-id-here

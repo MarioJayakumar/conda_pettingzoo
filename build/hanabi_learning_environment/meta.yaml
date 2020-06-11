@@ -1,0 +1,29 @@
+package:
+  name: "hanabi_learning_environment"
+  version: "0.0.1"
+
+source:
+  url: "https://files.pythonhosted.org/packages/c9/fc/557e6ebd9c7f12909e4e815c4b10174610f08ce202e4cabbbe0f60cb7278/hanabi_learning_environment-0.0.1.tar.gz"
+  sha256: 7817e33298c30ae1150332531559e0ff12a6c7a4b5e76dce7acfb9818d7db95d
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - cmake
+    - scikit-build
+    - cffi
+
+
+about:
+  home: "https://github.com/PettingZoo-Team/PettingZoo"
+  license: UNKNOWN
+  license_family: OTHER
+  license_file: 
+  summary: "Gym for multi-agent reinforcement learning"
+  doc_url: 
+  dev_url: 
+
+extra:
+  recipe-maintainers:
+    - your-github-id-here

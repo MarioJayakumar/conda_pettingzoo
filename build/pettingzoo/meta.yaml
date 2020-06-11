@@ -1,0 +1,63 @@
+{% set name = "pettingzoo" %}
+{% set version = "0.1.8" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: "https://files.pythonhosted.org/packages/86/77/0831b04fa1f9045726f6a0ec3c75309d2ab974b67170887921753747f07d/PettingZoo-0.1.8.tar.gz"
+  sha256: 9d3b05aa8deeb36ecd7ad2334cee7a901ab79caf105b925489aca452afa9f0b6
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - box2d-py
+    - gym >=0.17.2
+    - gym[box2d] >=0.17.2
+    - hanabi_learning_environment
+    - multi_agent_ale_py
+    - numpy >=1.18.0
+    - opencv
+    - pip
+    - pygame ==2.0.0.dev10
+    - pymunk >=5.6.0
+    - pynput
+    - python
+    - python-chess
+    - python-shogi
+    - rlcard >=0.1.14
+    - scikit-image >=0.16.2
+  run:
+    - box2d-py
+    - gym >=0.17.2
+    - gym[box2d] >=0.17.2
+    - hanabi_learning_environment
+    - multi_agent_ale_py
+    - numpy >=1.18.0
+    - opencv
+    - pygame ==2.0.0.dev10
+    - pymunk >=5.6.0
+    - pynput
+    - python
+    - python-chess
+    - python-shogi
+    - rlcard >=0.1.14
+    - scikit-image >=0.16.2
+
+
+about:
+  home: "https://github.com/PettingZoo-Team/PettingZoo"
+  license: UNKNOWN
+  license_family: OTHER
+  license_file: 
+  summary: "Gym for multi-agent reinforcement learning"
+  doc_url: 
+  dev_url: 
+
+extra:
+  recipe-maintainers:
+    - your-github-id-here

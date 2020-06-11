@@ -1,0 +1,41 @@
+{% set name = "python-shogi" %}
+{% set version = "1.0.9" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: 720c59ff2add4cda49ef6414394d1325c27648d82eac64342c99a79897cfaa8d
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - python
+
+test:
+  imports:
+    - shogi
+  requires:
+    - mock
+    - nose >=1.0
+
+about:
+  home: "https://github.com/gunyarakun/python-shogi"
+  license: "GNU General Public (GPL)"
+  license_family: LGPL
+  license_file: 
+  summary: "A pure Python shogi library with move generation and validation and handling of common formats."
+  doc_url: 
+  dev_url: 
+
+extra:
+  recipe-maintainers:
+    - your-github-id-here
